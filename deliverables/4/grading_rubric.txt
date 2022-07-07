@@ -1,0 +1,46 @@
+Report content (10%):
+
+Screenshot and report for Feature 1:                      _____ / 5
+  * Make sure you take the screenshot after refactoring.
+
+Screenshot and report for Feature 2:                      _____ / 5
+
+Autograder (75%):
+
+You need to find THREE methods that are intentionally implemented in
+a way to be grossly slow, that take up most of the CPU time.
+
+Performance tests:                                        _____ / 45
+  * -15 for each slow method.
+
+My pinning tests:                                         _____ / 15
+  * -5 for each failing pinning test.
+
+Your pinning tests (GameOfLifePinningTest):               _____ / 15
+  * -5 for each failing pinning test.
+
+Your pinning tests are written correctly (15%):
+
+Tested objects are not mocked:                            _____ / 5
+  * Tested objects should not be mocked and tested code exercised as part
+    of the test.
+
+External objects are mocked appropriately:                _____ / 5
+  * Each pinning test should be localized; code for external classes should
+    not be exercised as part of the test.
+
+Behavior verification is used appropriately:              _____ / 5
+  * One of the pinning test requires behavior verification; it returns void
+    and does not change any visible state.  You need to use behavior
+    verification for this method.
+
+-----
+
+Late submission or other adjustments:                     _____
+  * Note that the last late submission for this deliverable is April 6 due to
+    the University grading deadline.
+
+Total:                                                    _____ / 100
+
+
+

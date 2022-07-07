@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+<Match>
+   <Class name="DrunkCarnivalShooterImpl" />
+   <Method name="main" />
+   <Bug pattern="DM_DEFAULT_ENCODING" />
+</Match>
+</FindBugsFilter>

@@ -1,0 +1,52 @@
+TESTING BUGGY IMPLEMENTATION
+
+testAddFirstRoom(CoffeeMakerQuestTest): null
+testAddRoomAtNorthDuplicate(CoffeeMakerQuestTest): null
+testAddRoomAtNorthUnique(CoffeeMakerQuestTest): 
+Argument(s) are different! Wanted:
+room.setNorthDoor("North");
+-> at CoffeeMakerQuestTest.testAddRoomAtNorthUnique(CoffeeMakerQuestTest.java:120)
+Actual invocation has different arguments:
+room.setNorthDoor("South");
+-> at CoffeeMakerQuestBuggy.addRoomAtNorth(CoffeeMakerQuestBuggy.java:66)
+
+testGetCurrentRoom(CoffeeMakerQuestTest): expected null, but was:<Room@7c0e2abd>
+testGetInstructionsString(CoffeeMakerQuestTest): expected:< INSTRUCTIONS [(N,S,L,I,D,H) ]> > but was:< INSTRUCTIONS []> >
+testProcessCommandDLose(CoffeeMakerQuestTest): expected:<...GAR!
+
+You drink the [air, as you have no coffee, sugar, or cream.
+The air is invigorating, but not invigorating enough. You cannot study.
+You lose]!
+> but was:<...GAR!
+
+You drink the [beverage and are ready to study!
+You win]!
+>
+testProcessCommandDWin(CoffeeMakerQuestTest): expected:<...gar.
+
+You drink the [beverage and are ready to study!
+You win]!
+> but was:<...gar.
+
+You drink the [air, as you have no coffee, sugar, or cream.
+The air is invigorating, but not invigorating enough. You cannot study.
+You lose]!
+>
+testProcessCommandI(CoffeeMakerQuestTest): expected:<[YOU HAVE NO COFFEE!
+YOU HAVE NO CREAM!
+YOU HAVE NO SUGAR!]
+> but was:<[Player has nothing.]
+>
+testProcessCommandLCream(CoffeeMakerQuestTest): 
+Argument(s) are different! Wanted:
+player.addItem(CREAM);
+-> at CoffeeMakerQuestTest.testProcessCommandLCream(CoffeeMakerQuestTest.java:189)
+Actual invocation has different arguments:
+player.addItem(COFFEE);
+-> at CoffeeMakerQuestBuggy.processCommand(CoffeeMakerQuestBuggy.java:151)
+
+testProcessCommandN(CoffeeMakerQuestTest): expected:<Mock for Room, hashCode: 1463757745> but was:<Mock for Room, hashCode: 1525262377>
+testProcessCommandS(CoffeeMakerQuestTest): expected:<Mock for Room, hashCode: 1837760739> but was:<Room@548b7f67>
+testSetCurrentRoom(CoffeeMakerQuestTest): null
+
+!!! - At least one failure, see above.

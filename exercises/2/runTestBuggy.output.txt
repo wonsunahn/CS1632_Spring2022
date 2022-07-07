@@ -1,0 +1,30 @@
+TESTING BUGGY IMPLEMENTATION
+
+testCatAvailableFalseNumCats0(RentACatTest): No cats but catAvailable(2) returns true
+testCatAvailableFalseNumCats3(RentACatTest): 3 cats and cat 2 is rented but catAvailable(2) returns true
+testCatAvailableTrueNumCats3(RentACatTest): 3 cats and cat 2 is not rented but catAvailable(2) returns false
+testCatExistsFalseNumCats0(RentACatTest): No cats but catExists(2) returns true
+testCatExistsTrueNumCats3(RentACatTest): 3 cats but catExists(2) returns false
+testListCatsNumCats0(RentACatTest): No cats but listCats() returns non-empty string expected:<[]> but was:<[empty]>
+testListCatsNumCats3(RentACatTest): 3 cats and listCats() does not return the expected string expected:<ID 1. Jennyanydots[
+ID 2. Old Deuteronomy
+ID 3. Mistoffelees
+]> but was:<ID 1. Jennyanydots[ ID 2. Old Deuteronomy   ID 3. Mistoffelees      ]>
+testRentCatFailureNumCats0(RentACatTest): No cats but rentCat(2) returns true
+testRentCatFailureNumCats3(RentACatTest): 3 cats and cat 2 is rented but rentCat(2) returns true
+testReturnCatFailureNumCats0(RentACatTest): No cats but returnCat(2) returns true
+testReturnCatNumCats3(RentACatTest):
+Wanted but not invoked:
+cat.returnCat();
+-> at RentACatTest.testReturnCatNumCats3(RentACatTest.java:278)
+
+However, there were other interactions with this mock:
+cat.getId();
+-> at RentACatBuggy.getCat(RentACatBuggy.java:143)
+
+cat.getRented();
+-> at RentACatBuggy.returnCat(RentACatBuggy.java:21)
+
+
+
+!!! - At least one failure, see above.
